@@ -38,10 +38,7 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
  	margin: 0 auto;
  }
 
- header {
-   left: 0;
-   right: 0;
-   z-index: 0;
+ .content {
 	width: 1000px;
 	margin: 0 auto;
 	background: #fff;
@@ -51,31 +48,50 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 	margin-top: -25px;
  }
 
- ul {
+  .blogContent {
+ 	width: 60%;
+ 	margin-left: 5%;
+ 	background: #fff;
+ 	z-index: 444;
+ 	border: 2px solid #eee;
+ 	position: relative;
+ 	margin-top: -25px;
+ 	float: left;
+  }
+
+   .blogSidebar {
+  	width: 30%;
+  	margin-right: 5%;
+  	position: relative;
+  	background: #f9f9f9;
+  	float: left;
+   }
+
+ .headerNav ul {
      width:100%;
      margin:0 auto;
      padding:0;
      list-style:none;
      background-color:#bada55;
      text-align:center;
-     padding-bottom: 200px;
+     padding-bottom: 100px;
  }
 
- li { 
+ .headerNav ul li { 
      display:inline-block;
      width: 19%;
      margin:0;
      padding:0;
  }
 
- nav ul li a {
+ .headerNav ul li a {
      text-align:center;
      padding:12px 0 13px 0;
      margin:0;
      display:block;
  }
 
- nav ul li a:hover { 
+ .headerNav ul li a:hover { 
      background:#A26A42;
  }
 
@@ -111,13 +127,6 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 	background: #f9f9f9;
 }
 
-.sSection {
-	position: relative;
-	width: 100%;
-	margin: 0 auto;
-	overflow: hidden;
-}
-
 div .skills {
 	width: 1000px;
 	margin: 0 auto;
@@ -146,5 +155,74 @@ footer {
 	height: 100px;
 	z-index: -555;
 	z-index: -1;
-	margin-top: -50px;
+	margin-top: -25px;
 }
+
+
+/* PERCENT CIRCLES START HERE */
+
+.progress-pie-chart {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #E5E5E5;
+  position: relative;
+}
+.progress-pie-chart.gt-50 {
+  background-color: #81CE97;
+}
+
+.ppc-progress {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  left: calc(50% - 75px);
+  top: calc(50% - 75px);
+  width: 150px;
+  height: 150px;
+  clip: rect(0, 150px, 150px, 75px);
+}
+.ppc-progress .ppc-progress-fill {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  left: calc(50% - 75px);
+  top: calc(50% - 75px);
+  width: 150px;
+  height: 150px;
+  clip: rect(0, 75px, 150px, 0);
+  background: #81CE97;
+  transform: rotate(60deg);
+}
+.gt-50 .ppc-progress {
+  clip: rect(0, 75px, 150px, 0);
+}
+.gt-50 .ppc-progress .ppc-progress-fill {
+  clip: rect(0, 150px, 150px, 75px);
+  background: #E5E5E5;
+}
+
+.ppc-percents {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  left: calc(50% - 130.43478px/2);
+  top: calc(50% - 130.43478px/2);
+  width: 130.43478px;
+  height: 130.43478px;
+  background: #fff;
+  text-align: center;
+  display: table;
+}
+.ppc-percents span {
+  display: block;
+  font-size: 2.6em;
+  font-weight: bold;
+  color: #81CE97;
+}
+
+.pcc-percents-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+

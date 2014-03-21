@@ -1,9 +1,6 @@
-<div class="4u">
-	<div id="sidebar">
+
+	<div class="blogSidebar">
 	
 		<!-- Sidebar -->
-	<ul>
 	<?php dynamic_sidebar('home_right_1'); ?>
-	</ul>
 	</div>
-</div> 
