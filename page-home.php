@@ -11,36 +11,48 @@ Template Name: Home Page
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-<article class="content">
+<article class="content layered-paper">
+<div class="mahFace clearfix">
 	<?php $Faceimg = get_field('enter_image'); ?>
+
 	<img src="<?php echo $Faceimg["url"] ?>">
 
 	<h1><?php the_field('enter_name'); ?></h1>
-	<h2><?php the_field('job_title'); ?></h2>
 
-	<?php $SMimg1 = get_field('social_media1'); ?>
-	<?php $SMimg2 = get_field('social_media2'); ?>
-	<?php $SMimg3 = get_field('social_media3'); ?>
-	<?php $SMimg4 = get_field('social_media4'); ?>
+	<div class="jobTitles">
+	<h2 class="job"><?php the_field('job_title'); ?></h2>	</div>
+	<div class="jobTitles1">
+	<h2 class="job"><a href="<?php the_field('job_title_link'); ?>" class ="jobLink" target="_blank"><?php the_field('job_title2'); ?></a></h2></div>
+	<div class="jobTitles">
+	<h2 class="job"><?php the_field('job_title3'); ?></h2></div>
+	</div>
 
-	<img src="<?php echo $SMimg1["url"] ?>">
-	<img src="<?php echo $SMimg2["url"] ?>">
-	<img src="<?php echo $SMimg3["url"] ?>">
-	<img src="<?php echo $SMimg4["url"] ?>">
+	<div class="links clearfix">
+
+
+
+		<?php $SMimg1 = get_field('social_media1'); ?>
+		<?php $SMimg2 = get_field('social_media2'); ?>
+		<?php $SMimg3 = get_field('social_media3'); ?>
+		<?php $SMimg4 = get_field('social_media4'); ?>
+
+		<div class ="socialMedia"><a href="<?php the_field('social_media_link1'); ?>" target="_blank"><img src="<?php echo $SMimg1["url"] ?>"></a></div>
+		<div class ="socialMedia"><a href="<?php the_field('social_media_link2'); ?>" target="_blank"><img src="<?php echo $SMimg2["url"] ?>"></a></div>
+		<div class ="socialMedia"><a href="<?php the_field('social_media_link3'); ?>" target="_blank"><img src="<?php echo $SMimg3["url"] ?>"></a></div>
+		<div class ="socialMedia"><a href="<?php the_field('social_media_link4'); ?>" target="_blank"><img src="<?php echo $SMimg4["url"] ?>"></a></div>
+	</div>
+</div>
+
 	
 
 			</article>
 
 			<article class="fSection">
+			<div class="skillSection">
 			<h3><?php the_field('skill_name'); ?></h3>
-			
-
 			<?php $SIimg1 = get_field('skill_icon1'); ?>
-			
-			<img src="<?php echo $SIimg1["url"] ?>">
-
-
-			<div class="progress-pie-chart" data-percent="81">
+			<img src="<?php echo $SIimg1["url"] ?>" class="SIimg">
+			<div class="progress-pie-chart" data-percent="90">
 			  <div class="ppc-progress">
 			    <div class="ppc-progress-fill"></div>
 			  </div>
@@ -50,14 +62,13 @@ Template Name: Home Page
 			    </div>
 			  </div>
 			</div>
+			</div>
+
+			<div class="skillSection">
 			<h3><?php the_field('skill_name2'); ?></h3>
-
 			<?php $SIimg2 = get_field('skill_icon2'); ?>
-			
-			<img src="<?php echo $SIimg2["url"] ?>">
-
-
-			<div class="progress-pie-chart" data-percent="81">
+			<img src="<?php echo $SIimg2["url"] ?>" class="SIimg">
+			<div class="progress-pie-chart" data-percent="80">
 			  <div class="ppc-progress">
 			    <div class="ppc-progress-fill"></div>
 			  </div>
@@ -67,13 +78,13 @@ Template Name: Home Page
 			    </div>
 			  </div>
 			</div>
+			</div>
+			
+			<div class="skillSection">
 			<h3><?php the_field('skill_name3'); ?></h3>
-		
 			<?php $SIimg3 = get_field('skill_icon3'); ?>
-			
-			<img src="<?php echo $SIimg3["url"] ?>">
-
-			<div class="progress-pie-chart" data-percent="81">
+			<img src="<?php echo $SIimg3["url"] ?>" class="SIimg">
+			<div class="progress-pie-chart" data-percent="65">
 			  <div class="ppc-progress">
 			    <div class="ppc-progress-fill"></div>
 			  </div>
@@ -83,12 +94,12 @@ Template Name: Home Page
 			    </div>
 			  </div>
 			</div>
-
+			</div>
 
 						</article>
 							
-						<article class="content">
-							<?php the_content(); ?>
+						<article class="content layered-paper">
+							<div class="contentStyle"><?php the_content(); ?></div>
 									</article>
 
 									

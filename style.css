@@ -18,19 +18,43 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
  }
 
  p {
- 	font-family: 'Lustria', serif;
+ 	font-family: 'Oxygen Mono';
+ 	color: #242424;
+ 	line-height: 1.6;
  }
 
  h1, h2, h3, h4, h5, h6 {
- 	font-family: 'Lato', serif; 
- 	font-weight: 400; 
- 	font-style: italic;
+ 	font-family: 'Press Start 2P', cursive; 
+ 	color: #242424;
+ 	letter-spacing: -1px;
+ }
+
+ h2 {
+ 	border-bottom: solid 1px #d30501;
+ 	font-size: 16px;
  }
 
  img {
  	max-width: 100%;
- 	border-radius: 50%;
- 	-webkit-box-shadow: 0 0 1px #000;
+ }
+
+ a {
+ 	color: #f9f9f9;
+ 	text-decoration: none;
+ }
+
+ li {
+ 	list-style: none;
+ 	font-family: 'Lustria', serif;
+ 	font-size: 14px;
+ }
+
+ h2 a {
+ 	color: #242424;
+ }
+
+ p a {
+ 	color: #d30501;
  }
 
  .wrapper {
@@ -39,13 +63,36 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
  }
 
  .content {
-	width: 1000px;
-	margin: 0 auto;
-	background: #fff;
+	margin-right: 10%;
+	margin-left: 10%;
 	z-index: 444;
 	border: 2px solid #eee;
 	position: relative;
 	margin-top: -25px;
+ }
+
+ .contentStyle {
+ 	margin: 0 10%;
+ }
+
+ .layered-paper {
+     background: #fff;
+     box-shadow:
+         0 1px 1px rgba(0,0,0,0.15), /* The top layer shadow */
+         0 10px 0 -5px #fff, /* The second layer */
+         0 10px 1px -4px rgba(0,0,0,0.15), /* The second layer shadow */
+         0 20px 0 -10px #fff, /* The third layer */
+         0 20px 10px -9px rgba(0,0,0,0.40); /* The third layer shadow */
+ }
+
+ .layered-paper2 {
+     background: #fff;
+     box-shadow:
+         0 1px 1px rgba(0,0,0,0.15), /* The top layer shadow */
+         10px 10px 0 -5px #fff, /* The second layer */
+         10px 10px 1px -4px rgba(0,0,0,0.15), /* The second layer shadow */
+         20px 20px 0 -10px #fff, /* The third layer */
+         18px 20px 5px -9px rgba(0,0,0,0.40); /* The third layer shadow */
  }
 
   .blogContent {
@@ -56,15 +103,51 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
  	border: 2px solid #eee;
  	position: relative;
  	margin-top: -25px;
+ 	margin-bottom: -25px;
  	float: left;
   }
 
    .blogSidebar {
   	width: 30%;
   	margin-right: 5%;
+  	padding-left: 2%;
   	position: relative;
   	background: #f9f9f9;
   	float: left;
+   }
+
+   .blogTalk {
+   	padding-right: 10%;
+   	padding-left: 2%;
+   }
+
+   .blogTalk a {
+	line-height: 1.8;
+   }
+
+   .widget a {
+   	color: #d30501;
+   }
+
+   .widget {
+	margin-bottom: 10%;
+   }
+
+   .wp-pagenavi {
+   	margin: 50px 0 30px 0;
+   }
+
+   .wp-pagenavi span {
+   	font-family: 'Press Start 2P', cursive; 
+   }
+
+   .wp-pagenavi a {
+   	color: #d30501;
+   	font-family: 'Press Start 2P', cursive; 
+   }
+
+   .more-link {
+   	font-family: 'Press Start 2P', cursive;
    }
 
  .headerNav ul {
@@ -72,51 +155,92 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
      margin:0 auto;
      padding:0;
      list-style:none;
-     background-color:#bada55;
+     background-color:#d30501;
      text-align:center;
      padding-bottom: 100px;
  }
 
  .headerNav ul li { 
      display:inline-block;
-     width: 19%;
+     width: 20%;
      margin:0;
      padding:0;
+
  }
 
  .headerNav ul li a {
+ 	font-family: 'Press Start 2P', cursive;
      text-align:center;
      padding:12px 0 13px 0;
      margin:0;
      display:block;
+     transition: background .25s ease-in-out;
+     -moz-transition: background .25s ease-in-out;
+     -webkit-transition: background .25s ease-in-out;
  }
 
  .headerNav ul li a:hover { 
-     background:#A26A42;
+    background:#f9f9f9;
+    color: #d30501;
  }
 
 
  .mahFace {
-	margin-bottom: 50px;
+ 	margin: 0 auto;
 	text-align: center;
  }
 
  .mahFace img {
  	margin-top: -80px;
- 	background: white;
-	border: 1px solid black;
+ 	background: #f9f9f9;
+	border: 1px solid #d30501;
 	padding: 10px;
+	border-radius: 50%;
+	-webkit-box-shadow: 0 0 1px #d30501;
+ }
+
+ .jobTitles, .jobTitles1{
+ 	float: left;
+ 	width: 33.3%;
+ }
+
+ .jobTitles1 a  {
+ 	background: #fff;
+ 	padding: 10px;
+ }
+
+.jobTitles1 a:hover {
+ 	background: #d30501;
+ 	color: #f9f9f9;
+ }
+
+ .job {
+ 	border: none;
+
  }
 
  div .links {
  	width: 100%;
 	text-align: center;
-	padding-bottom: 100px;
+	clear: both;
  }
 
- div .image {
-	width: 25%;
-	float: left;
+ .jobLink {
+	color: #d30501;
+ 	opacity: 1;
+ 	transition: opacity .25s ease-in-out;
+ 	-moz-transition: opacity .25s ease-in-out;
+ 	-webkit-transition: opacity .25s ease-in-out;
+ }
+
+ .joblink:hover {
+ 	opacity: 0.5;
+ }
+
+ .socialMedia {
+ 	background: #d30501;
+ 	width: 25%;
+ 	float: left;
  }
 
 .fSection {
@@ -125,11 +249,24 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 	margin: 0 auto;
 	overflow: hidden;
 	background: #f9f9f9;
+	margin-top: 50px;
+	margin-bottom: 75px;
 }
 
 div .skills {
 	width: 1000px;
 	margin: 0 auto;
+}
+
+.skillSection {
+	text-align: center;
+	width: 33%;
+	float: left;
+}
+
+.SIimg {
+	width: 200px;
+	height: 200px;
 }
 
  .techLang div {
@@ -151,11 +288,12 @@ div .skills2 {
 
 footer {
 	width: 100%;
-	background: #bada55;
+	background: #d30501;
 	height: 100px;
 	z-index: -555;
 	z-index: -1;
 	margin-top: -25px;
+	clear: both;
 }
 
 
@@ -165,11 +303,9 @@ footer {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  background-color: #E5E5E5;
+  background-color: #d30501;
   position: relative;
-}
-.progress-pie-chart.gt-50 {
-  background-color: #81CE97;
+  margin: 0 auto;
 }
 
 .ppc-progress {
@@ -191,15 +327,8 @@ footer {
   width: 150px;
   height: 150px;
   clip: rect(0, 75px, 150px, 0);
-  background: #81CE97;
+  background: #ffc4c3;
   transform: rotate(60deg);
-}
-.gt-50 .ppc-progress {
-  clip: rect(0, 75px, 150px, 0);
-}
-.gt-50 .ppc-progress .ppc-progress-fill {
-  clip: rect(0, 150px, 150px, 75px);
-  background: #E5E5E5;
 }
 
 .ppc-percents {
@@ -218,11 +347,15 @@ footer {
   display: block;
   font-size: 2.6em;
   font-weight: bold;
-  color: #81CE97;
+  color: #d30501;
 }
 
 .pcc-percents-wrapper {
   display: table-cell;
   vertical-align: middle;
 }
+
+
+
+
 

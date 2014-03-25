@@ -5,8 +5,8 @@
 
 <!-- Content -->
 
-<article class="blogContent">
-<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+<article class="blogContent layered-paper2">
+<div class="blogTalk"><?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
 		<h2>
 			<a href="<?php the_permalink(); ?>">
@@ -16,9 +16,8 @@
 	<?php the_content(); ?>
 			<?php endwhile; ?>
 		<?php wp_pagenavi(); ?>
+</div>
 </article>
-			
-
 
 
 
