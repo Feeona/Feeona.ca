@@ -16,9 +16,9 @@
 	<div class="wrapper">
 	<nav class="headerNav">
 	  <ul>
-	    <li class="fade"><a href="http://localhost/Feeona.ca/wordpress/home/">Home</a></li>
-	    <li class="fade"><a href="http://localhost/Feeona.ca/wordpress/blog/">Blog</a></li>
-	    <li class="fade"><a href="http://localhost/Feeona.ca/wordpress/portfolio/">Portfolio</a></li>
-	    <li class="fade"><a href="http://localhost/Feeona.ca/wordpress/contact/">Contact</a></li>
+	    <li><a href="http://localhost/Feeona.ca/wordpress/home/">Home</a></li>
+	    <li><a href="http://localhost/Feeona.ca/wordpress/blog/">Blog</a></li>
+	    <li><a href="http://localhost/Feeona.ca/wordpress/portfolio/">Portfolio</a></li>
+	    <li><a href="http://localhost/Feeona.ca/wordpress/contact/">Contact</a></li>
 	  </ul>
 	</nav>
