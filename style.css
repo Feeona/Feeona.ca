@@ -9,18 +9,32 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 	clear: both;
 }
 
+* {
+	margin: 0;
+}
+
 *, *:before, *:after {
 	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
 
+#wpadminbar {
+	position: fixed;
+}
+
 body {
 	background: #f9f9f9;
+	height: 100%;
+}
+
+html {
+  height: 100%;
 }
 
 p {
 	font-family: 'Oxygen Mono';
 	color: #242424;
 	line-height: 1.6;
+	margin: 2% 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -29,9 +43,14 @@ h1, h2, h3, h4, h5, h6 {
 	letter-spacing: -1px;
 }
 
+h1 {
+	padding: 20px 0;
+}
+
 h2 {
-	border-bottom: solid 1px #d30501;
 	font-size: 16px;
+	padding: 20px 0;
+	text-align: center;
 }
 
 img {
@@ -47,6 +66,7 @@ li {
 	list-style: none;
 	font-family: 'Lustria', serif;
 	font-size: 14px;
+	margin-top: 5px;
 }
 
 h2 a {
@@ -55,99 +75,22 @@ h2 a {
 
 p a {
 	color: #d30501;
+	transition: background .25s ease-in-out;
+	-moz-transition: background .25s ease-in-out;
+	-webkit-transition: background .25s ease-in-out;
+}
+
+p a:hover {
+	color: #f9f9f9;
+	background: #d30501;
 }
 
 .wrapper {
 	width: 100%;
 	margin: 0 auto;
-}
-
-.content {
-	margin-right: 10%;
-	margin-left: 10%;
-	z-index: 444;
-	border: 2px solid #eee;
 	position: relative;
-	margin-top: -25px;
-}
-
-.contentStyle {
-	margin: 0 10%;
-}
-
-.layered-paper {
-	background: #fff;
-	box-shadow:
-	0 1px 1px rgba(0,0,0,0.15), /* The top layer shadow */
-	0 10px 0 -5px #fff, /* The second layer */
-	0 10px 1px -4px rgba(0,0,0,0.15), /* The second layer shadow */
-	0 20px 0 -10px #fff, /* The third layer */
-	0 20px 10px -9px rgba(0,0,0,0.40); /* The third layer shadow */
-}
-
-.layered-paper2 {
-	background: #fff;
-	box-shadow:
-	0 1px 1px rgba(0,0,0,0.15), /* The top layer shadow */
-	10px 10px 0 -5px #fff, /* The second layer */
-	10px 10px 1px -4px rgba(0,0,0,0.15), /* The second layer shadow */
-	20px 20px 0 -10px #fff, /* The third layer */
-	18px 20px 5px -9px rgba(0,0,0,0.40); /* The third layer shadow */
-}
-
-.blogContent {
-	width: 60%;
-	margin-left: 5%;
-	background: #fff;
-	z-index: 444;
-	border: 2px solid #eee;
-	position: relative;
-	margin-top: -25px;
-	margin-bottom: -25px;
-	float: left;
-}
-
-.blogSidebar {
-	width: 30%;
-	margin-right: 5%;
-	padding-left: 2%;
-	position: relative;
-	background: #f9f9f9;
-	float: left;
-}
-
-.blogTalk {
-	padding-right: 10%;
-	padding-left: 2%;
-}
-
-.blogTalk a {
-	line-height: 1.8;
-}
-
-.widget a {
-	color: #d30501;
-}
-
-.widget {
-	margin-bottom: 10%;
-}
-
-.wp-pagenavi {
-	margin: 50px 0 30px 0;
-}
-
-.wp-pagenavi span {
-	font-family: 'Press Start 2P', cursive; 
-}
-
-.wp-pagenavi a {
-	color: #d30501;
-	font-family: 'Press Start 2P', cursive; 
-}
-
-.more-link {
-	font-family: 'Press Start 2P', cursive;
+	bottom: 0;
+	-webkit-transition: all 0.5s;
 }
 
 .headerNav ul {
@@ -184,6 +127,128 @@ p a {
 	color: #d30501;
 }
 
+.toggle, label {
+	display: none;
+}
+
+.hamburger {
+	font-size: 30px;
+	color: #f9f9f9;
+	margin-left: 5px;
+}
+
+input, textarea {
+	max-width: 100%;
+	padding: 5px;
+}
+
+
+.content {
+	margin-right: 10%;
+	margin-left: 10%;
+	padding: 20px 0;
+	z-index: 444;
+	border: 2px solid #eee;
+	position: relative;
+	margin-top: -25px;
+}
+
+.contentStyle {
+	margin: 0 5%;
+}
+
+.layered-paper {
+	background: #fff;
+	box-shadow:
+	0 1px 1px rgba(0,0,0,0.15), /* The top layer shadow */
+	0 10px 0 -5px #fff, /* The second layer */
+	0 10px 1px -4px rgba(0,0,0,0.15), /* The second layer shadow */
+	0 20px 0 -10px #fff, /* The third layer */
+	0 20px 10px -9px rgba(0,0,0,0.40); /* The third layer shadow */
+}
+
+.layered-paper2 {
+	background: #fff;
+	box-shadow:
+	0 1px 1px rgba(0,0,0,0.15), /* The top layer shadow */
+	10px 10px 0 -5px #fff, /* The second layer */
+	10px 10px 1px -4px rgba(0,0,0,0.15), /* The second layer shadow */
+	20px 20px 0 -10px #fff, /* The third layer */
+	18px 20px 5px -9px rgba(0,0,0,0.40); /* The third layer shadow */
+}
+
+.blogContent {
+	width: 60%;
+	margin-left: 5%;
+	background: #fff;
+	z-index: 444;
+	border: 2px solid #eee;
+	position: relative;
+	margin-top: -25px;
+	margin-bottom: -25px;
+	float: left;
+}
+
+.blogTalk {
+	width: 100%;
+}
+
+.blogTalk a {
+	line-height: 1.8;
+}
+
+.blogTalk h2 {
+	border: none;
+	text-align: left;
+	padding-left: 1%;
+}
+
+.blogTalk p {
+	padding: 0 5%;
+}
+
+.dateyDate {
+	border: none;
+	color: #f9f9f9;
+	background: #d30501;
+	text-align: left;
+	padding: 2% 1%;
+	margin-top: 35px;
+}
+
+.rounded {
+	text-align: left;
+	padding: 10px 0;
+}
+
+.widget a {
+	color: #d30501;
+}
+
+.widget {
+	margin-bottom: 10%;
+}
+
+.widget ul {
+	padding: 10px;
+}
+
+.wp-pagenavi {
+	margin: 50px 0 30px 0;
+}
+
+.wp-pagenavi span {
+	font-family: 'Press Start 2P', cursive; 
+}
+
+.wp-pagenavi a {
+	color: #d30501;
+	font-family: 'Press Start 2P', cursive; 
+}
+
+.more-link {
+	font-family: 'Press Start 2P', cursive;
+}
 
 .mahFace {
 	margin: 0 auto;
@@ -199,10 +264,11 @@ p a {
 	-webkit-box-shadow: 0 0 1px #d30501;
 }
 
-.jobTitles, .jobTitles1, .footerLinks{
+.jobTitles, .jobTitles1 {
 	float: left;
 	width: 33.3%;
 	text-align: center;
+	padding-bottom: 20px;
 }
 
 .jobTitles1 a  {
@@ -215,15 +281,19 @@ p a {
 	color: #f9f9f9;
 }
 
-.job {
-	border: none;
-
+.portSection {
+	width: 100%;
 }
 
-.portSections {
+.portParts {
 	float: left;
-	width: 27%;
-	margin: 0 3%;
+	text-align: center;
+	width: 33.3%;
+	margin: 0 auto;
+}
+
+.portParts img {
+	border: 1px solid #d30501;
 }
 
 div .links {
@@ -233,6 +303,7 @@ div .links {
 }
 
 .jobLink {
+	text-align: center;
 	color: #d30501;
 	transition: background .25s ease-in-out;
 	-moz-transition: background .25s ease-in-out;
@@ -249,7 +320,7 @@ div .links {
 	float: left;
 }
 
-.fSection {
+.fSection, .fSection2 {
 	position: relative;
 	width: 100%;
 	margin: 0 auto;
@@ -257,6 +328,17 @@ div .links {
 	background: #f9f9f9;
 	margin-top: 50px;
 	margin-bottom: 75px;
+	min-height: 100px;
+}
+
+.fSection2 {
+	width: 30%;
+	margin-right: 5%;
+	padding-left: 2%;
+	margin-top: 0;
+	margin-bottom: 0;
+	background: #f9f9f9;
+	float: right;
 }
 
 div .skills {
@@ -272,6 +354,7 @@ div .skills {
 
 .hobbiesSection {
 	width: 25%;
+	padding: 1%;
 }
 
 .SIimg {
@@ -292,14 +375,6 @@ div .skills {
 	padding-bottom: 40px;
 }
 
-.portParts {
-	text-align: center;
-}
-
-.portParts img {
-	border: 1px solid #d30501;
-}
-
 .portImgSize {
 	height: 150px;
 	width: 150px;
@@ -312,6 +387,7 @@ div .skills {
 
 .holdPort img {
 	margin: 10px 30px;
+	padding: 5px;
 	border: 1px solid #d30501;
 }
 
@@ -341,6 +417,7 @@ div .skills {
 
 .wpcf7-form p {
 	font-family: 'Press Start 2P', cursive;
+	padding: 10px;
 }
 
 .wpcf7-text, .wpcf7-textarea {
@@ -350,14 +427,6 @@ div .skills {
 
 .wpcf7-submit {
 	font-family: 'Press Start 2P', cursive;
-}
-
-:focus {
-	border: 3px solid #242424;
-}
-
-input {
-	padding: 5px;
 }
 
 div .skills2 {
@@ -377,11 +446,12 @@ footer {
 	margin-top: -25px;
 	clear: both;
 	overflow: hidden;
+	padding-top: 40px;
+	padding-bottom: 40px;
 }
 
 footer h3 {
-	padding-top: 50px;
-	padding-bottom: 10px;
+	padding-top: 35px;
 	text-align: center;
 	font-size: 12px;
 }
@@ -396,69 +466,219 @@ footer h3 a {
 footer h3 a:hover {
 	background: #f9f9f9;
 	color: #d30501;
+}
 
+progress[value] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  width: 250px;
+  max-width: 100%;
+  height: 20px;
+  /* For IE10 */
+  color: blue; 
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+progress[value]::-webkit-progress-value {
+  background-image:
+	   -webkit-linear-gradient(-45deg, 
+	                           transparent 33%, rgba(0, 0, 0, .1) 33%, 
+	                           rgba(0,0, 0, .1) 66%, transparent 66%),
+	   -webkit-linear-gradient(top, 
+	                           rgba(255, 255, 255, .25), 
+	                           rgba(0, 0, 0, .25)),
+	   -webkit-linear-gradient(left, #09c, #f44);
+
+    border-radius: 2px; 
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+	-webkit-animation: animate-stripes 5s linear infinite;
+	        animation: animate-stripes 5s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+   100% { background-position: -100px 0px; }
+}
+
+@keyframes animate-stripes {
+   100% { background-position: -100px 0px; }
+}
+
+/* Progress bar for FF */
+
+progress[value]::-moz-progress-bar { 
+  background-image:
+    -moz-linear-gradient(
+      135deg, 
+      transparent 33%, 
+      rgba(0, 0, 0, 0.1) 33%, 
+      rgba(0, 0, 0, 0.1) 66%, 
+      transparent 66% 
+    ),
+    -moz-linear-gradient(
+      top, 
+      rgba(255, 255, 255, 0.25), 
+      rgba(0, 0, 0, 0.25)
+    ),
+    -moz-linear-gradient(
+      left, 
+      #09c, 
+      #f44
+    );
+
+  border-radius: 2px; 
+  background-size: 35px 20px, 100% 100%, 100% 100%; 
 }
 
 
-/* PERCENT CIRCLES START HERE */
+@media (max-width: 782px) {
 
-.progress-pie-chart {
-	width: 150px;
-	height: 150px;
-	border-radius: 50%;
-	background-color: #d30501;
-	position: relative;
-	margin: 0 auto;
+	.hobbiesSection {
+		width: 50%;
+	}
+
+	.content, .layered-paper {
+		margin-right: 2%;
+		margin-left: 2%;
+	}
+
 }
 
-.ppc-progress {
-	content: "";
-	position: absolute;
-	border-radius: 50%;
-	left: calc(50% - 75px);
-	top: calc(50% - 75px);
-	width: 150px;
-	height: 150px;
-	clip: rect(0, 150px, 150px, 75px);
-}
-.ppc-progress .ppc-progress-fill {
-	content: "";
-	position: absolute;
-	border-radius: 50%;
-	left: calc(50% - 75px);
-	top: calc(50% - 75px);
-	width: 150px;
-	height: 150px;
-	clip: rect(0, 75px, 150px, 0);
-	background: #ffc4c3;
-	transform: rotate(60deg);
+@media (max-width: 620px) {
+	
+	.jobTitles {
+		width: 100%;
+		padding-bottom: 0;
+	}
+
+	.skillSection {
+		width: 100%;
+	}
+
+	.SIimg {
+		float: left;
+	}
+
+	.progressRAWR {
+		float: right;
+		padding-top: 15%;
+		margin-right: 5%;
+	}
+
+	.blogContent {
+		width: 100%;
+		margin: 0;
+		position: relative;
+		margin-bottom: 0px;
+		float: none;
+	}
+
+	.fSection2 {
+		text-align: center;
+		width: 100%;
+		float: none;
+		margin-top: 5%;
+	}
+
+	.widget h2 {
+		text-align: center;
+	}
+
+	.widget {
+		margin-bottom: 5%;
+	}
+
+	.wrapper {
+		top: -150px;
+	}
+
+	.headerNav ul {
+		width:100%;
+		margin:0;
+		padding:0;
+		list-style:none;
+		background-color:#d30501;
+		text-align:center;
+		padding-bottom: 100px;
+		z-index: 44;
+	}
+
+	.headerNav ul li { 
+		display:inline-block;
+		width: 100%;
+		margin:0;
+		padding:0;
+	}
+	.headerNav ul li a {
+		font-family: 'Press Start 2P', cursive;
+		text-align:center;
+		padding:12px 0 13px 0;
+		display:block;
+		transition: background .25s ease-in-out;
+		-moz-transition: background .25s ease-in-out;
+		-webkit-transition: background .25s ease-in-out;
+	}
+
+	.headerNav ul li a:hover { 
+		background:#f9f9f9;
+		color: #d30501;
+	}
+
+	  input[type=checkbox]:checked ~ .wrapper {
+	    top: 0px;
+	    position: relative;
+	    display: block;
+	  }
+
+	  label[for="toggle"]{
+	    float: left;
+	    display: block;
+	  }
+	
+	.portParts {
+		float: none;
+		width: 100%;
+	}
+
 }
 
-.ppc-percents {
-	content: "";
-	position: absolute;
-	border-radius: 50%;
-	left: calc(50% - 130.43478px/2);
-	top: calc(50% - 130.43478px/2);
-	width: 130.43478px;
-	height: 130.43478px;
-	background: #fff;
-	text-align: center;
-	display: table;
-}
-.ppc-percents span {
-	display: block;
-	font-size: 2.6em;
-	font-weight: bold;
-	color: #d30501;
-}
+@media (max-width: 488px) {
+	
 
-.pcc-percents-wrapper {
-	display: table-cell;
-	vertical-align: middle;
+	.skillSection {
+		width: 100%;
+		padding-bottom: 10px;
+	}
+
+	.SIimg {
+		float: none;
+	}
+
+	.progressRAWR {
+		float: none;
+		padding-top: 0;
+		margin-right: 0;
+	}
+
+	.hobbiesSection {
+		width: 100%;
+	}
+
+	.hobbiesSection img {
+		float: left;
+	}
+
+	.content, .layered-paper {
+		margin: 0;
+	}
+
 }
-
-
 
 
 

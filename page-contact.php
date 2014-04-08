@@ -20,5 +20,5 @@ Template Name: Contact Page
 
 
 
-
+<article class="fSection"> </article>
 <?php get_footer(); ?>

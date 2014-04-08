@@ -37,4 +37,5 @@ echo "<li><a href='$url'>$tech->name</a></li>";
 <?php endwhile; // end of the loop. ?>
 </div>
 </article>
+<article class="fSection"> </article>
 <?php get_footer(); ?>
