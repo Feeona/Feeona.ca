@@ -12,6 +12,9 @@
 		<script src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.dropotron.min.js"></script>
 		<script src="<?php bloginfo('stylesheet_directory'); ?>/js/config.js"></script>
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" />
+		<script charset="utf-8" type="text/javascript">var switchTo5x=true;</script>
+		<script charset="utf-8" type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+		<script charset="utf-8" type="text/javascript">stLight.options({"publisher":"e2161246-b46d-413b-b82e-ae9fe426e827"});var st_type="wordpress3.8.2";</script>
 		
 
 

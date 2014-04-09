@@ -17,11 +17,15 @@
 
 		</h2>
 	<?php the_content(); ?>
+
 			<?php endwhile; ?>
 		<?php wp_pagenavi(); ?>
 
+
 </div>
 </div>
+
+
 </article>
 
 
