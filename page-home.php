@@ -53,7 +53,7 @@ Template Name: Home Page
 					<h3><?php the_field('skill_name'); ?></h3>
 					<?php $SIimg1 = get_field('skill_icon1'); ?>
 					<img src="<?php echo $SIimg1["url"] ?>" class="SIimg">
-					<div class="progressRAWR"><progress max="100" value="80"></progress></div>
+					<div class="progressRAWR"><progress max="100" value="95"></progress></div>
 
 				</div>
 
@@ -61,14 +61,14 @@ Template Name: Home Page
 					<h3><?php the_field('skill_name2'); ?></h3>
 					<?php $SIimg2 = get_field('skill_icon2'); ?>
 					<img src="<?php echo $SIimg2["url"] ?>" class="SIimg">
-					<div class="progressRAWR"><progress max="100" value="80"></progress></div>
+					<div class="progressRAWR"><progress max="100" value="85"></progress></div>
 				</div>
 
 				<div class="skillSection">
 					<h3><?php the_field('skill_name3'); ?></h3>
 					<?php $SIimg3 = get_field('skill_icon3'); ?>
 					<img src="<?php echo $SIimg3["url"] ?>" class="SIimg">
-					<div class="progressRAWR"><progress max="100" value="80"></progress>
+					<div class="progressRAWR"><progress max="100" value="65"></progress>
 
 				</div>
 

@@ -475,39 +475,42 @@ progress[value] {
   border: none;
   width: 250px;
   max-width: 100%;
-  height: 20px;
+  height: 25px;
   /* For IE10 */
-  color: blue; 
+  color: blue;
+
 }
 
 progress[value]::-webkit-progress-bar {
-  background-color: #eee;
-  border-radius: 2px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+  background-color: #454545;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.50) inset;
+  border-radius: 15px;
+  border: 2px solid #242424;
+  
 }
 
 progress[value]::-webkit-progress-value {
   background-image:
-	   -webkit-linear-gradient(-45deg, 
+	   -webkit-linear-gradient(0deg, 
 	                           transparent 33%, rgba(0, 0, 0, .1) 33%, 
 	                           rgba(0,0, 0, .1) 66%, transparent 66%),
 	   -webkit-linear-gradient(top, 
-	                           rgba(255, 255, 255, .25), 
-	                           rgba(0, 0, 0, .25)),
-	   -webkit-linear-gradient(left, #09c, #f44);
+	                           rgba(69, 69, 69, .20), 
+	                           rgba(255, 255, 255, .50)),
+	   -webkit-linear-gradient(top, #eee, #fff);
 
-    border-radius: 2px; 
-    background-size: 35px 20px, 100% 100%, 100% 100%;
+    border-radius: 15px; 
+    background-size: 200px 100px, 100% 100%, 100% 100%;
 	-webkit-animation: animate-stripes 5s linear infinite;
 	        animation: animate-stripes 5s linear infinite;
 }
 
 @-webkit-keyframes animate-stripes {
-   100% { background-position: -100px 0px; }
+   100% { background-position: 1000px 0px; }
 }
 
 @keyframes animate-stripes {
-   100% { background-position: -100px 0px; }
+   100% { background-position: 1000px 0px; }
 }
 
 /* Progress bar for FF */
@@ -532,7 +535,7 @@ progress[value]::-moz-progress-bar {
       #f44
     );
 
-  border-radius: 2px; 
+  border-radius: 15px; 
   background-size: 35px 20px, 100% 100%, 100% 100%; 
 }
 
